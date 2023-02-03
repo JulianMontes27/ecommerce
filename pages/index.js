@@ -11,13 +11,15 @@ const Home = ({ products, bannerData }) => {
       {console.log(bannerData)}
 
       <div className='products-heading'>
-        <h2>Best selling Products</h2>
-        <p>Speakers of many variations</p>
+        <h2>Productos más vendidos</h2>
+        <p>Variaciones de audífonos</p>
       </div>
 
       <div className='products-container'>
         {
-          products?.map((product)=> `  ${product.name}`)
+          products?.map((product)=> <Product key={product._id}
+          product= {product}
+          />)
         }
       </div>
         <FooterBanner/>
